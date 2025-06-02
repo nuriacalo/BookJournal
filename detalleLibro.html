@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book Journal</title>
+    <link rel="stylesheet" href="stylesDetalle.css">
+    <script src="scriptDetalle.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="site-header">
+        <img src="resources/logo.svg" alt="Logo de Mi Diario de Lectura" class="logo">
+        <h1>Diario de Lectura</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="book.html">MI DIARIO</a></li>
+            <li><a href="about.html">SOBRE MÍ</a></li>
+        </ul>
+    </nav>
+    <div id="detalle-libro"></div>
+    <div>
+        <div class="title-container">
+            <h1>Detalles del Libro</h1>
+            <p>Información detallada sobre el libro seleccionado.</p>
+        </div>
+        <div class="main-layout">
+            <div class="book-details-flex">
+                <div class="book-image-side">
+                    <img id="book-image" src="" alt="Imagen del libro">
+                    <div class="book-buttons">
+                        <button id="edit-book-button">Editar Libro</button>
+                        <button id="delete-book-button">Eliminar Libro</button>
+                        <button id="back-button">Volver</button>
+                    </div>
+                </div>
+                <div class="book-info-side">
+                    <h2 id="book-title">Título del Libro</h2>
+                    <p id="book-author"><strong>Autor: </strong><span></span></p>
+                    <p id="book-genre"><strong>Género:</strong><span></span></p>
+                    <p id="reading-date"><strong>Fecha de lectura: </strong><span></span></p>
+                    <p id="reading-status"><strong> Estado de lectura: </strong><span></span></p>
+                    <p id="book-sinopsis"><strong>Sinopsis:</strong> <span></span></p>
+                    <p id="book-stars"><strong>Valoración:</strong> <span></span></p>
+                    <p id="book-lagrimas"><strong>Lágrimas lloradas:</strong> <span></span></p>
+                    <p id="book-recomienda"><strong>¿Lo recomendarías?:</strong> <span></span></p>
+                    <p id="book-notas"><strong>Notas personales:</strong> <span></span></p>
+                    <div id="edit-modal" class="modal" style="display:none;">
+                        <div class="modal-content">
+                            <span class="close-modal">&times;</span>
+                            <h2>Editar Libro</h2>
+                            <form id="edit-book-form" class="book-edit-form"></form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

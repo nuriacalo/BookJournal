@@ -1,0 +1,374 @@
+body {
+  background-color: #f7fafd;
+  position: relative;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  background-color: #69839f;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2em;
+  font-family: 'Raleway', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 4px;
+  font-variant: small-caps;
+}
+
+.site-header .logo {
+  height: 60px;
+  width: auto;
+  margin-right: 13px;
+  margin-left: -3rem;
+}
+
+nav {
+  background-color: #69839f;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  box-shadow: inset 0 3px 0 rgba(255, 255, 255, 0.2);
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background 0.2s;
+  font-family: 'Raleway', Arial, sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1em;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  background: #3a71ab;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.main-layout {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.title-container {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title-container h1 {
+  color: #2c3e50;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.title-container p {
+  color: #7f8c8d;
+  font-size: 1.1rem;
+}
+
+/* --- DETALLES DEL LIBRO --- */
+.book-details-flex {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.book-image-side {
+  flex: 1;
+  min-width: 300px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.book-image-side img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.book-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 300px;
+}
+
+.book-info-side {
+  flex: 2;
+  min-width: 300px;
+}
+
+.book-info-side h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e1e1e1;
+}
+
+.book-info-side p {
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+}
+
+.book-info-side strong {
+  font-weight: 700;
+  color: #2c3e50;
+}
+
+.book-info-side span {
+  font-weight: 400;
+  color: #7f8c8d;
+}
+
+#book-stars span {
+  color: #ffd903;
+  font-size: 1.2em;
+  letter-spacing: 1px;
+}
+
+/* --- BOTONES --- */
+#edit-book-button,
+#delete-book-button,
+#back-button {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+#edit-book-button,
+#back-button {
+  background-color: #3498db;
+  color: white;
+}
+
+#edit-book-button:hover,
+#back-button:hover {
+  background-color: #2980b9;
+}
+
+#delete-book-button {
+  background-color: #e74c3c;
+  color: white;
+}
+
+#delete-book-button:hover {
+  background-color: #c0392b;
+}
+
+/* --- FORMULARIO --- */
+#edit-book-form {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  margin: 2rem auto;
+  max-width: 600px;
+  border: 1px solid #e1e1e1;
+  overflow: visible;
+  position: relative;
+}
+
+#edit-book-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+#edit-book-form input,
+#edit-book-form select,
+#edit-book-form textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+#edit-book-form input:focus,
+#edit-book-form select:focus {
+  border-color: #3498db;
+  outline: none;
+}
+#edit-book-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 1rem 0 0;
+}
+#edit-book-form button:hover {
+  background-color: #2980b9;
+}
+
+/* ESTILOS DEL MODAL DE EDICIÓN */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.7);
+  overflow-y: auto;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 5% auto;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 700px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #7f8c8d;
+}
+
+.book-edit-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.book-edit-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.book-edit-form input,
+.book-edit-form select,
+.book-edit-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.book-edit-form textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.book-edit-form .full-width {
+  grid-column: span 2;
+}
+
+.book-edit-form .form-actions {
+  grid-column: span 2;
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Sistema de valoración */
+.star-rating-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.star-rating {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.star-rating input {
+    display: none;
+}
+
+.star-rating label {
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 4px;
+    background: #f0f0f0;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.star-rating .full-star {
+    font-size: 1.4rem;
+    color: #ccc;
+    min-width: 30px;
+}
+
+.star-rating .half-star {
+    font-size: 1rem;
+    background: #e6e6e6;
+    min-width: 25px;
+}
+
+.star-rating input:checked + label,
+.star-rating label:hover {
+    background: #FFD700;
+    color: #8a6d00;
+    transform: scale(1.1);
+}
+
+.rating-value {
+    font-size: 0.9rem;
+    color: #666;
+    font-weight: bold;
+    min-width: 80px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Book Journal</title>
+    <link rel="stylesheet" href="stylesBook.css">
+    <script src="scriptBook.js"></script>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="site-header">
+        <img src="resources/logo.svg" alt="Logo de Mi Diario de Lectura" class="logo">
+        <h1>Diario de Lectura</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="pageBook.html">MI DIARIO</a></li>
+            <li><a href="about.html">SOBRE MÍ</a></li>
+        </ul>
+    </nav>
+    <div class="main-layout">
+        <div class="sidebar">
+            <div class="add-book">
+                <h2>Añadir un nuevo libro</h2>
+                <form id="add-book-form">
+                    <label for="book-title">Título del libro:</label>
+                    <input type="text" id="book-title" name="book-title" required>
+                    <label for="book-author">Autor:</label>
+                    <input type="text" id="book-author" name="book-author" required>
+                    <label for="book-genre">Género:</label>
+                    <input type="text" id="book-genre" name="book-genre" required>
+                    <label for="reading-date">Fecha de lectura (opcional):</label>
+                    <input type="date" id="reading-date" name="reading-date">
+                    <label for="reading-status">Estado de lectura:</label>
+                    <select id="reading-status" name="reading-status">
+                        <option value="leído">Leído</option>
+                        <option value="leyendo">Leyendo</option>
+                        <option value="pendiente">Pendiente</option>
+                    </select>
+                    <label>
+                        <input type="checkbox" id="add-manga">
+                        Es manga
+                    </label><br>
+                    <label for="book-image">Imagen del libro (URL):</label>
+                    <input type="url" id="book-image" name="book-image" placeholder="https://example.com/image.jpg">
+                    <label for="book-image-file">O sube una imagen:</label>
+                    <input type="file" id="book-image-file" accept="image/*">
+                    <button type="submit">Añadir Libro</button>
+                </form>
+            </div>
+            <div class="filter-options">
+                <h2>Filtrar libros</h2>
+                <label>
+                    <input type="checkbox" id="filter-manga">
+                    Solo mangas
+                </label> <br>
+                <label for="filter-genre">Género:</label>
+                <select id="filter-genre">
+                    <option value="all">Todos</option>
+                    <option value="Fantasía">Fantasía</option>
+                    <option value="Aventura">Aventura</option>
+                    <option value="Acción">Acción</option>
+                    <option value="Fantasía oscura">Fantasía oscura</option>
+                    <option value="Manga">Manga</option>
+                    <option value="Romance">Romance</option>
+                </select>
+                <label for="filter-status">Estado de lectura:</label>
+                <select id="filter-status">
+                    <option value="all">Todos</option>
+                    <option value="leído">Leído</option>
+                    <option value="leyendo">Leyendo</option>
+                    <option value="pendiente">Pendiente</option>
+                </select>
+                <button id="filter-button">Filtrar</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="title-container">
+                <h1>Bienvenido a tu Diario de Lectura</h1>
+                <p>Guarda y organiza tus libros leídos, en lectura y pendientes.</p>
+            </div>
+            <div class="books">
+                <h2>Libros Leídos</h2>
+                <div class="book-list" id="read-list"></div>
+
+                <h2>Libros que estoy leyendo</h2>
+                <div class="book-list" id="reading-list"></div>
+
+                <h2>Libros pendientes de leer</h2>
+                <div class="book-list" id="to-read-list"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
